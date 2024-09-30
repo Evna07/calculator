@@ -5,7 +5,7 @@ import ButtonBox from "../ButtonBox/ButtonBox";
 const Wrapper = () => {
   return (
     <div className={styles.wrapper}>
-      <Screen></Screen>
+      <Screen value="6"></Screen>
       <ButtonBox></ButtonBox>
     </div>
   );
