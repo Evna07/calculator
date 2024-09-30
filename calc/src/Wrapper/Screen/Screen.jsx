@@ -1,5 +1,7 @@
+import styles from "./Screen.module.scss";
+
 const Screen = () => {
-  <div></div>;
+  return <div className={styles.screen}></div>;
 };
 
 export default Screen;

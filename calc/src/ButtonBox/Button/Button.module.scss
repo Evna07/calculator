@@ -1,0 +1,29 @@
+.actionButton {
+  border: none;
+  background-color: #e5e5e5;
+  font-size: 24px;
+  color: #14213d;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+}
+
+.actionButton:hover {
+  background-color: #adb5bd;
+}
+
+.equals {
+  grid-column: 3 / 5;
+  background-color: #fca311;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+}
+
+.equals:hover {
+  background-color: #eb5e28;
+}

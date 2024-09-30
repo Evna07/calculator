@@ -1,10 +1,12 @@
 import styles from "./Wrapper.module.scss";
 import Screen from "./Screen/Screen";
+import ButtonBox from "../ButtonBox/ButtonBox";
 
 const Wrapper = () => {
   return (
     <div className={styles.wrapper}>
       <Screen></Screen>
+      <ButtonBox></ButtonBox>
     </div>
   );
 };
