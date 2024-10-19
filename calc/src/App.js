@@ -36,8 +36,8 @@ const App = () => {
           calc.num === 0 && value === "0"
             ? "0"
             : removeSpaces(calc.num) % 1 === 0
-            ? toLocaleString(Number(removeSpaces(calc.num + value)))
-            : toLocaleString(calc.num + value),
+              ? toLocaleString(Number(removeSpaces(calc.num + value)))
+              : toLocaleString(calc.num + value),
         res: !calc.sign ? 0 : calc.res,
       });
     }
@@ -71,10 +71,10 @@ const App = () => {
         sign === "+"
           ? a + b
           : sign === "-"
-          ? a - b
-          : sign === "X"
-          ? a * b
-          : (a / b).toFixed(2);
+            ? a - b
+            : sign === "X"
+              ? a * b
+              : (a / b).toFixed(2);
 
       setCalc({
         ...calc,
@@ -85,8 +85,8 @@ const App = () => {
                 math(
                   Number(removeSpaces(calc.res)),
                   Number(removeSpaces(calc.num)),
-                  calc.sign
-                )
+                  calc.sign,
+                ),
               ),
         sign: "",
         num: 0,
@@ -138,16 +138,19 @@ const App = () => {
                 btn === "C"
                   ? resetClickHandler
                   : btn === "+-"
-                  ? invertClickHandler
-                  : btn === "%"
-                  ? percentClickHandler
-                  : btn === "="
-                  ? equalsClickHandler
-                  : btn === "/" || btn === "X" || btn === "-" || btn === "+"
-                  ? signClickHandler
-                  : btn === "."
-                  ? commaClickHandler
-                  : numClickHandler
+                    ? invertClickHandler
+                    : btn === "%"
+                      ? percentClickHandler
+                      : btn === "="
+                        ? equalsClickHandler
+                        : btn === "/" ||
+                            btn === "X" ||
+                            btn === "-" ||
+                            btn === "+"
+                          ? signClickHandler
+                          : btn === "."
+                            ? commaClickHandler
+                            : numClickHandler
               }
             />
           );

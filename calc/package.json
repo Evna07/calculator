@@ -7,6 +7,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "cypress": "^13.15.0",
+    "husky": "^9.1.6",
+    "install": "^0.13.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -16,7 +18,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky",
+    "format": "prettier --write .",
+    "lint": "prettier --check ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --write . && git add -A ."
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -37,6 +47,8 @@
     ]
   },
   "devDependencies": {
+    "git-format-staged": "^3.1.1",
+    "prettier": "^3.3.3",
     "sass": "^1.79.4"
   }
 }
