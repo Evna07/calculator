@@ -60,7 +60,9 @@ const App = () => {
     setCalc({
       ...calc,
       sign: value,
+
       res: !calc.res && calc.num ? calc.num : calc.res,
+
       num: 0,
     });
   };
@@ -85,8 +87,8 @@ const App = () => {
                 math(
                   Number(removeSpaces(calc.res)),
                   Number(removeSpaces(calc.num)),
-                  calc.sign,
-                ),
+                  calc.sign
+                )
               ),
         sign: "",
         num: 0,
