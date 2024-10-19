@@ -77,6 +77,10 @@ const App = () => {
             : sign === "X"
               ? a * b
               : (a / b).toFixed(2);
+            ? a - b
+            : sign === "X"
+              ? a * b
+              : (a / b).toFixed(2);
 
       setCalc({
         ...calc,
@@ -128,7 +132,7 @@ const App = () => {
 
   return (
     <Wrapper>
-      <h1>Goodbye</h1>
+      <hi>Hello World</hi>
       <Screen value={calc.num ? calc.num : calc.res} />
       <ButtonBox>
         {btnValues.flat().map((btn, i) => {
@@ -141,6 +145,19 @@ const App = () => {
                 btn === "C"
                   ? resetClickHandler
                   : btn === "+-"
+                    ? invertClickHandler
+                    : btn === "%"
+                      ? percentClickHandler
+                      : btn === "="
+                        ? equalsClickHandler
+                        : btn === "/" ||
+                            btn === "X" ||
+                            btn === "-" ||
+                            btn === "+"
+                          ? signClickHandler
+                          : btn === "."
+                            ? commaClickHandler
+                            : numClickHandler
                     ? invertClickHandler
                     : btn === "%"
                       ? percentClickHandler
